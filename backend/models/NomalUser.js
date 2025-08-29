@@ -37,14 +37,10 @@ const NormalUser = new mongoose.Schema({
         required: true,
         trim: true
     },
-    company: {
-        type: String,
-        trim: true
-    },
     agreeTerms: {
         type: Boolean,
         required: true
     }
 }, { timestamps: true });
 
-module.exports =mongoose.model('NormalUser',NormalUser)
+module.exports=mongoose.model('NormalUser',NormalUser)

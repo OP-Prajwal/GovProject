@@ -4,6 +4,8 @@ const dotenv=require('dotenv')
 dotenv.config()
 const app=express()
 
+app.use(express.json())
+
 app.listen(3000,()=>{
     console.log("server is running on port 3000")
 })
@@ -19,3 +21,6 @@ async function DBconnection() {
 }
 DBconnection()
 
+
+const NormalUserRoutes=require('./UserRoutes/Authentication.js')
+app.use('/user',NormalUserRoutes)
